@@ -43,6 +43,7 @@ Screeshots:
 ![image](https://github.com/user-attachments/assets/4be15a72-1205-4f8e-a942-0298e8a254ad)
 ![image](https://github.com/user-attachments/assets/b99c4bd1-cc0b-44d3-92d2-60db171892f4)
 ![image](https://github.com/user-attachments/assets/ce9452cc-1494-465e-b6d6-89d800cf230b)
+![video](https://github.com/patilkshitijp/-RizzFeed/blob/main/screen-capture.mp4)
 
 
 
