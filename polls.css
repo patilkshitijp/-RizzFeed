@@ -1,0 +1,128 @@
+input {
+    display: none;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    padding-top: 20px; /* Reduce top padding */
+    box-sizing: border-box;
+}
+.search-card {
+    position: relative;
+    top: -50px; /* Move it up */
+}
+body {
+   
+    padding-top: 80px;/* Hides the scrollbar */
+}
+.articles {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* More space between rows */
+    margin-bottom: 60px; /* Adds space between articles */
+}
+
+.article-col {
+    flex: 1;
+    min-width: 300px;
+    position: relative; /* Allows fine-tuned positioning */
+    top: 0; /* Reset previous -20px adjustment */
+}
+
+.article-col:last-child {
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    margin-left: 40px; /* Moves the image slightly to the right */
+}
+
+/* Image alignment */
+.article-col img {
+    width: 100%;
+    max-width: 450px; /* Slightly bigger for better visuals */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Paragraph styling */
+.article-col p {
+    font-size: 18px; /* Adjust size */
+    font-family: "Montserrat", Arial, sans-serif; /* Better font fallback */
+    font-weight: 400;
+    line-height: 1.8; /* Increased for better readability */
+    color: #000000; /* Softer black for better UX */
+    text-align: justify;
+    margin-bottom: 20px; /* Adds space below paragraph */
+}
+
+/* Heading styling */
+.article-col h1 {
+    font-size: 30px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: bold;
+    color: #000000; /* Darker for emphasis */
+    margin-bottom: 10px;
+}
+
+/* Fix spacing between rows */
+.articles::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.card-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents cards from wrapping to the next line */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Centers the cards horizontally */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    padding: 10px;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 12rem;
+    border-radius: 10px; /* Removes rounded corners */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.card img {
+    width: 100%; /* Ensures the image fills the card */
+    height: 300px; /* Maintains the aspect ratio */
+    border-radius: 0; /* Removes any circular styling */
+    object-fit: cover; /* Ensures the image covers the available space */
+
+}
+.movies-heading {
+    font-family: "Montserrat", arial;
+    display: inline-block; /* Keep it in one line */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 8px; /* Adds small space */
+}
+
+.wrapper {
+    margin-bottom: -100px; /* Reduce space */
+    padding-bottom: 0;
+}
+.movies-heading {
+    margin-left: auto;
+    display: block;
+}
+.movies-heading {
+    position: relative;
+    left: 150px; /* Adjust this value as needed */
+}
+.heading-container {
+    display: flex;
+    justify-content: flex-end;
+}

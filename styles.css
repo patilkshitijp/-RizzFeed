@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+
+    background-color: rgba(40, 40, 40, 0.9);
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+
+    
+}
+
+li,a, button{
+    font-family: "Montserrat", arial;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header{
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: px 10%;
+    background: rgba(40, 40, 40, 0.9);
+    width: 100%; /* Ensures full width */
+    position: fixed; /* Keeps navbar fixed */
+    top: 0; /* Stick to the top */
+    left: 0; /* Aligns navbar correctly */
+    
+    
+}
+.logo {
+    width: auto;
+    height: 80px;  
+    object-fit: contain;
+    margin-right: auto;
+}
+.nav-links{
+    list-style: none;
+    
+    gap: 20px;
+    position: relative;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color: rgb(237, 112, 16);
+}
+button{
+    padding: 9px 25px;
+    background-color: rgb(237, 112, 16);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+
+}
+button:hover{
+    color:rgba(0, 0, 0, 0.8);
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    padding-top: 15px; /* Reduce top padding */
+    box-sizing: border-box;
+}
+
+.card {
+    font-family: "Montserrat", arial;
+    width: 380px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(15px); /* Blurred background */
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+    
+}
+
+
+.card h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+.card h1[contenteditable="true"] {
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    cursor: text;
+    padding: 5px;
+}
+.card label {
+    display: block;
+    width: fit-content;
+    background: rgba(237, 112, 16, 0.9);
+    color: white;
+    padding: 10px 15px;
+    margin: 10px auto;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.card label:hover {
+    background: rgb(200, 80, 10);
+    transform: scale(1.05);
+}
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid rgb(237, 112, 16);
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+.card img:hover {
+    transform: scale(1.05);
+}
+#save-profile {
+    width: 90%;
+    background: rgb(237, 112, 16);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: block;
+    margin: 10px auto;
+}
+#save-profile:hover {
+    background: rgb(200, 80, 10);
+    transform: scale(1.05);
+}
+.card input, .card textarea {
+    font-family: "Montserrat", arial;
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+.card input::placeholder, .card textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card textarea {
+    resize: none;
+}
+#save-profile:hover {
+    background: rgb(200, 80, 10);
+    transform: scale(1.05);
+}
+label{
+    display: block;
+    width: 200px;
+    background: rgb(237, 112, 16);
+    color: white;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  rgba(40, 40, 40, 0.95);;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    top: 100%;
+    left: 50%;
+    overflow: hidden;
+}
+
+
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.quote-box {
+    width: 400px;
+    background: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px auto; /* Centers it */
+    font-family: "Montserrat", sans-serif;
+    margin-top: 120px; 
+}
+
+.quote-box h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#quote {
+    font-size: 16px;
+    font-style: "Montserrat", arial;
+    margin: 20px 0;
+}
+
+.quote-box button {
+    background: rgb(237, 112, 16);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.quote-box button:hover {
+    background: rgb(200, 80, 10);
+    transform: scale(1.05);
+}
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container1 {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card1 {
+    width: 80px;
+    height: 300px;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card1 > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card1 > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.card1 > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+/* Hide radio buttons */
+
+
+/* Expanding card on selection */
+.card1:hover {
+    width: 500px; /* Expands the card */
+    transition: width 0.6s cubic-bezier(.28,-0.03,0,.99);
+}
+
+/* Reveal description on hover */
+.card1:hover .description {
+    opacity: 1;
+    transform: translateY(0);
+    width: auto;
+    transition: all .3s ease-in-out;
+}
+
+/* Assign background images */
+.card1[for="c1"] { background-image: url('images/daredevil.jpg'); }
+.card1[for="c2"] { background-image: url('images/the-boys.jpg'); }
+.card1[for="c3"] { background-image: url('images/severence.jpg'); }
+.card1[for="c4"] { background-image: url('images/invincible.jpg'); }
+.card1[for="c5"] { background-image: url('images/chaava.jpg'); }
+.card1[for="c6"] { background-image: url('images/mickey17.jpg'); }
+.card1[for="c7"] { background-image: url('images/snowwhite.jpg'); }
+.card1[for="c8"] { background-image: url('images/electricstate.jpg'); }
+.card1[for="c9"] { background-image: url('images/captianamerica.jpg'); }
+.card1[for="c10"] { background-image: url('images/superboys.jpg'); }

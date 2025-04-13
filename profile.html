@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile</title>
+</head>     
+<body>
+<header>
+    <img src="images/logo.png.png"  class="logo"  alt="logo">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="yapp.html">Search Movie</a></li>
+            
+            <!-- Dropdown for "More" -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">More</a>
+                <ul class="dropdown-content">
+                    <li><a href="page1.html">Delusional Kanye</a></li>
+                    <li><a href="page2.html">The Top 10</a></li>
+                    <li><a href="page3.html">Upcoming</a></li>
+                </ul>
+            </li>
+        
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="contacts.html"><button>Contacts</button> </a>
+    
+</header>
+<div class="hero">
+    <div class="card">
+        <h1>Your Profile</h1>
+        
+        <!-- Profile Picture Upload -->
+        <img src="images/profile.jpg" id="profile_pic">
+        <label for="input-file">Update Image</label>
+        <input type="file" id="input-file" accept="image/jpeg, image/png, image/jpg" style="display: none;">
+
+        <!-- Name -->
+        
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <!-- Bio -->
+        <textarea id="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+
+        <!-- Save Button -->
+        <button id="save-profile">Save Profile</button>
+    </div>
+</div>
+
+<script>
+    let profilePic = document.getElementById("profile_pic");
+    let inputFile = document.getElementById("input-file");
+    let nameInput = document.getElementById("name");
+    let bioInput = document.getElementById("bio");
+    let saveButton = document.getElementById("save-profile");
+
+    // Load saved profile data when the page loads
+    window.onload = function() {
+        let savedImage = localStorage.getItem("profileImage");
+        let savedName = localStorage.getItem("profileName");
+        let savedBio = localStorage.getItem("profileBio");
+
+        if (savedImage) profilePic.src = savedImage;
+        if (savedName) nameInput.value = savedName;
+        if (savedBio) bioInput.value = savedBio;
+    };
+
+    // Update profile picture
+    inputFile.onchange = function() {
+        let file = inputFile.files[0];
+        let reader = new FileReader();
+
+        reader.onload = function() {
+            let imageData = reader.result;
+            profilePic.src = imageData;
+            localStorage.setItem("profileImage", imageData); // Save to localStorage
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
+    // Save name and bio when button is clicked
+    saveButton.onclick = function() {
+        localStorage.setItem("profileName", nameInput.value);
+        localStorage.setItem("profileBio", bioInput.value);
+        alert("Profile saved successfully!");
+    };
+</script>
+    
+</body>
+</html>
